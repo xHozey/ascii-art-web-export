@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/templates/static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <title>Ascii_Art Generator</title>
+</head>
+<body>
+    <img class="logo" src="/templates/static/img/logo.svg">
+    <form action="/ascii-art" method="POST">
+        <textarea name="text" placeholder="Write your text here..." maxlength="1500" required></textarea>
+        <div>
+            <div class="select">
+                <select id="select_template" name="banner" required>
+                    <option value="" selected disabled>Select style:</option>
+                    <option value="standard" aria-required="true">Standard</option>
+                    <option value="shadow">Shadow</option>
+                    <option value="thinkertoy">Thinkertory</option>
+                    <option value="graffiti">Graffiti</option>
+                </select>
+            </div>
+            
+            <button class="btn" type="submit">GENERATE</button>
+        </div>
+    </form>
+</body>
+</html>
